@@ -8,6 +8,11 @@ const parseData = response => response.json()
 // error handler
 const catchError = error => console.log(`%c${error}`, 'color: red;')
 
+const headers = {
+    "content-type": "application/json",
+    accept: "application/json"
+};
+
 //////////////////////////////////////////////////////
 
 // Fetches for kaijus, will return a promise
@@ -17,6 +22,34 @@ export const fetchKaijus = () => fetch(kaijusURL)
 .catch(catchError)
 
 // TODO: define a few more kaiju fetches
+export const addKaiju = (kaiju) => {
+    return fetch(kaijusURL, {
+        method: "POST",
+        headers,
+        body: JSON.stringify(kaiju)
+    })
+    .then(parseData)
+    .catch(catchError);
+}
+
+export const editKaiju = (kaiju) => {
+    return fetch(`${kaijusURL}/${kaiju.id}`, {
+        method: "PATCH",
+        headers,
+        body: JSON.stringify(kaiju)
+    })
+    .then(parseData)
+    .catch(catchError);
+}
+
+export const deleteKaiju = (kaiju_id) => {
+    return fetch(`${kaijusURL}/${kaiju_id}`, {
+        method: "DELETE",
+        headers
+    })
+    .then(parseData)
+    .catch(catchError);
+}
 
 //////////////////////////////////////////////////////
 
@@ -27,3 +60,12 @@ export const fetchSightings = () => fetch(sightingsURL)
 .catch(catchError)
 
 // TODO: define a few more sighting fetches
+export const addSighting = (sighting) => {
+    return fetch(sightingsURL, {
+        method: "POST",
+        headers,
+        body: JSON.stringify(sighting)
+    })
+    .then(parseData)
+    .catch(catchError);
+}

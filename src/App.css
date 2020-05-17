@@ -97,6 +97,12 @@ input::placeholder {
   color: white;
 }
 
+.kaiju-card-sighting-form {
+  background: #000a;
+  padding: 1em;
+  color: white;
+}
+
 .kaiju-card-delete-button {
   position: absolute;
   right: 0;

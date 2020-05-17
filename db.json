@@ -8,7 +8,7 @@
     },
     {
       "id": 2,
-      "name": "Mothra",
+      "name": "Mothra!!",
       "power": "Poison Powder",
       "image": "https://images-na.ssl-images-amazon.com/images/I/61Jp8FUo27L._SX466_.jpg"
     },
@@ -23,6 +23,12 @@
       "name": "Gidorah",
       "power": "Lightning breath",
       "image": "https://i.ebayimg.com/images/g/kskAAOSwp2VdldA4/s-l640.jpg"
+    },
+    {
+      "name": "blah???",
+      "power": "BLAH!!!",
+      "image": "https://image.shutterstock.com/image-vector/blah-vector-illustration-260nw-559967572.jpg",
+      "id": 6
     }
   ],
   "sightings": [
@@ -31,6 +37,12 @@
       "kaijuId": 1,
       "location": "Tokyo",
       "description": "Oh no! There goes Tokyo! Go go Godzilla!"
+    },
+    {
+      "kaijuId": "2",
+      "location": "NYC",
+      "description": "it's a big bug",
+      "id": 2
     }
   ]
 }

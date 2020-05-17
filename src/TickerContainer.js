@@ -10,13 +10,16 @@ const TickerContainer = ({kaijus}) => {
   useEffect(() => {requests.fetchSightings().then(setSightings)}, [])
 
   // Helper function
-  const findKaiju = (sighting) => kaijus.find(k => k.id === sighting.kaijuId)
+  const findKaiju = (sighting) => kaijus.find(k => k.id == sighting.kaijuId)
 
   // Helper function to build out spans for the ticker
   const renderSightings = () => {
     // Only show sightings if they exist
     if (kaijus.length && sightings.length) {
       return sightings.map(sighting => {
+
+        console.log("in the TICKER", sighting);
+
         const kaiju = findKaiju(sighting)
         // But also only show a sighting if the kaiju exists
         if (kaiju) {
